@@ -12,10 +12,12 @@ export const styles = StyleSheet.create({
   },
   imageBg: {
     flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     fontFamily: "CormorantGaramond-Bold",
     fontSize: RW(96),
-    color: Colors.BLACK,
+    color: Colors.WHITE,
   },
 });

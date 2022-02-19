@@ -22,30 +22,30 @@ const App = () => {
   const Stack = createNativeStackNavigator();
   const isLoggedIn = false;
   return (
-    <SafeAreaView style={styles.sectionContainer}>
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName={isLoggedIn ? "HomeTabs" : "Start"}
-          screenOptions={{
-            headerShown: false,
-          }}
-        >
-          <Stack.Screen name="HomeTabs" component={HomeTabs} />
+    // <SafeAreaView style={styles.sectionContainer}>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName={isLoggedIn ? "HomeTabs" : "Start"}
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="HomeTabs" component={HomeTabs} />
 
-          <Stack.Screen name="Info" component={Info} />
-          <Stack.Screen name="Start" component={StartScreen} />
-          <Stack.Screen name="Number" component={Number} />
-          <Stack.Screen name="Code" component={PinCode} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+        <Stack.Screen name="Info" component={Info} />
+        <Stack.Screen name="Start" component={StartScreen} />
+        <Stack.Screen name="Number" component={Number} />
+        <Stack.Screen name="Code" component={PinCode} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   sectionContainer: {
     flex: 1,
-    backgroundColor: "red",
+    // backgroundColor: "red",
   },
   sectionTitle: {
     fontSize: 24,

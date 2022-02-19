@@ -37,13 +37,11 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string/>
-<<<<<<< HEAD
-=======
+
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>PetApp app requires photo library access.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>PetApp app requires camera access to take photo.</string>
->>>>>>> 9129edc68ab778e8d38a8dc6a611e0014653fe95
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -70,14 +68,12 @@
 		<string>CormorantGaramond-Regular.ttf</string>
 		<string>CormorantGaramond-SemiBold.ttf</string>
 		<string>CormorantGaramond-SemiBoldItalic.ttf</string>
-<<<<<<< HEAD
 		<string>Gilroy-Regular.ttf</string>
 		<string>Montserrat-Bold.ttf</string>
 		<string>Montserrat-Light.ttf</string>
 		<string>Montserrat-Medium.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 		<string>Montserrat-SemiBold.ttf</string>
-=======
 		<string>gilroy-black.ttf</string>
 		<string>gilroy-bold.ttf</string>
 		<string>gilroy-medium.ttf</string>
@@ -103,7 +99,6 @@
 		<string>Montserrat-SemiBoldItalic.ttf</string>
 		<string>Montserrat-Thin.ttf</string>
 		<string>Montserrat-ThinItalic.ttf</string>
->>>>>>> 9129edc68ab778e8d38a8dc6a611e0014653fe95
 	</array>
 </dict>
 </plist>

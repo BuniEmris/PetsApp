@@ -4,22 +4,21 @@ import { RH, RW } from "../../../utils/helpers/responsive";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: Colors.WHITE,
-    width: "100%",
-    // alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "space-between",
+    height: RH(125),
   },
-  imageBg: {
-    flex: 1,
+  btn: {
+    backgroundColor: Colors.MAIN_GREEN,
+    width: RW(300),
+    height: RH(50),
+    borderRadius: RH(50),
     alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
   },
-  text: {
+  txtStyle: {
     fontFamily: "CormorantGaramond-Bold",
-    fontSize: RW(96),
+    fontSize: RW(24),
+    lineHeight: RH(29),
     color: Colors.WHITE,
-    paddingBottom: RH(175),
-    paddingTop: RH(365),
   },
 });

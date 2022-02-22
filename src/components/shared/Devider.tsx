@@ -1,14 +1,20 @@
-import * as React from "react"
-import Svg, { Path, Defs, Pattern, Use, Image } from "react-native-svg"
+import * as React from "react";
+import Svg, {
+  Path,
+  Defs,
+  Pattern,
+  Use,
+  Image,
+  SvgProps,
+} from "react-native-svg";
 
-function Devider(props) {
+function Devider(props: SvgProps) {
   return (
     <Svg
       width={360}
       height={20}
       viewBox="0 0 360 20"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       {...props}
     >
@@ -33,7 +39,7 @@ function Devider(props) {
         />
       </Defs>
     </Svg>
-  )
+  );
 }
 
-export default Devider
+export default Devider;

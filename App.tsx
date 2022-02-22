@@ -26,7 +26,7 @@ const App = () => {
     // <SafeAreaView style={styles.sectionContainer}>
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={isLoggedIn ? "HomeTabs" : "Info"}
+        initialRouteName={isLoggedIn ? "HomeTabs" : "Start"}
         screenOptions={{
           headerShown: false,
         }}

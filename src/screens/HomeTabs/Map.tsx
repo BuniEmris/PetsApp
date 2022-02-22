@@ -15,7 +15,7 @@ import MapView, {
 } from "react-native-maps"; //
 import Geolocation from "react-native-geolocation-service";
 import CenteredIcon from "../../assets/icons/CenteredIcon";
-import { RW } from "../../utils/helpers/responsive";
+import { RH, RW } from "../../utils/helpers/responsive";
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
@@ -84,7 +84,7 @@ const Map = () => {
           latitude: region?.coords.latitude,
           longitude: region?.coords.longitude,
         },
-        zoom: 10,
+        zoom: 17,
         heading: 0,
         pitch: 0,
         altitude: 5,
@@ -143,8 +143,8 @@ const Map = () => {
           backgroundColor: "#fff",
           alignItems: "center",
           justifyContent: "center",
-          bottom: 100,
-          right: 10,
+          bottom: RH(304),
+          right: RW(10),
         }}
       >
         <CenteredIcon />

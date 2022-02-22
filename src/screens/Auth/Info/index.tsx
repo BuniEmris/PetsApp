@@ -334,6 +334,7 @@ const Info = ({ navigation }: any) => {
           label="Add pet"
           disabled={false}
           onPress={() => {
+            navigation.navigate("HomeTabs");
             dispatch(clearInfo());
           }}
           style={{ marginTop: RH(50), width: RW(300), height: RH(50) }}

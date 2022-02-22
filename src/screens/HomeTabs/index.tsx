@@ -11,6 +11,7 @@ import WalkIcon from "../../assets/icons/WalkIcon";
 import PetIcon from "../../assets/icons/PetIcon";
 import SettingsIcon from "../../assets/icons/SettingsIcon";
 import { RH } from "../../utils/helpers/responsive";
+import { SafeAreaView } from "react-native-safe-area-context";
 const Tab = createBottomTabNavigator();
 const screenOptions = {
   headerShown: false,
@@ -22,8 +23,9 @@ const screenOptions = {
   },
 
   tabBarStyle: {
-    paddingTop: RH(15),
-    height: RH(62),
+    paddingTop: RH(24),
+    paddingBottom: RH(40),
+    height: RH(94),
     backgroundColor: appStyles.BACKGROUND_DEFAULT,
     shadowColor: "rgba(30, 27, 38, 0.05)",
     shadowRadius: 2,
@@ -38,47 +40,49 @@ const screenOptions = {
 
 const HomeTabs = () => {
   return (
-    <Tab.Navigator
-      sceneContainerStyle={{ backgroundColor: appStyles.BACKGROUND_DEFAULT }}
-      screenOptions={screenOptions}
-    >
-      <Tab.Screen
-        name="Map"
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <MapIcon width={size} height={size} stroke={color} />
-          ),
-        }}
-        component={Map}
-      />
-      <Tab.Screen
-        name="Walks"
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <WalkIcon width={size} height={size} stroke={color} />
-          ),
-        }}
-        component={Walks}
-      />
-      <Tab.Screen
-        name="Pets"
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <PetIcon width={size} height={size} fill={color} />
-          ),
-        }}
-        component={Pets}
-      />
-      <Tab.Screen
-        name="Settings"
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <SettingsIcon width={size} height={size} stroke={color} />
-          ),
-        }}
-        component={Settings}
-      />
-    </Tab.Navigator>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Tab.Navigator
+        sceneContainerStyle={{ backgroundColor: appStyles.BACKGROUND_DEFAULT }}
+        screenOptions={screenOptions}
+      >
+        <Tab.Screen
+          name="Map"
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MapIcon width={size} height={size} stroke={color} />
+            ),
+          }}
+          component={Map}
+        />
+        <Tab.Screen
+          name="Walks"
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <WalkIcon width={size} height={size} stroke={color} />
+            ),
+          }}
+          component={Walks}
+        />
+        <Tab.Screen
+          name="Pets"
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <PetIcon width={size} height={size} fill={color} />
+            ),
+          }}
+          component={Pets}
+        />
+        <Tab.Screen
+          name="Settings"
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <SettingsIcon width={size} height={size} stroke={color} />
+            ),
+          }}
+          component={Settings}
+        />
+      </Tab.Navigator>
+    </SafeAreaView>
   );
 };
 

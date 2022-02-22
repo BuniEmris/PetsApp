@@ -36,8 +36,11 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
-
+	<string>PetApp app requires location access</string>
+		<key>NSLocationAlwaysUsageDescription</key>
+		<string>PetApp app requires location access</string>
+		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+		<string>PetApp app requires location access</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>PetApp app requires photo library access.</string>
 	<key>NSCameraUsageDescription</key>

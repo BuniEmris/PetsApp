@@ -1,19 +1,20 @@
 /**
  * @format
  */
-
 import { AppRegistry } from "react-native";
-import React from "react";
-import { Provider } from "react-redux";
 import App from "./App";
+import React from "react";
 import { name as appName } from "./app.json";
 import { store } from "./src/redux/store";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Colors } from "./src/styles";
-
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+const persistor = persistStore(store);
 const myApp = () => (
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
 AppRegistry.registerComponent(appName, () => myApp);

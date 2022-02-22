@@ -18,6 +18,7 @@ import Info from "./src/screens/Auth/Info";
 import { Colors } from "./src/styles";
 import StartScreen from "./src/screens/Auth/StartScreen";
 import PinCode from "./src/screens/Auth/PinCode";
+import PetBreed from "./src/screens/Auth/breed";
 const App = () => {
   const Stack = createNativeStackNavigator();
   const isLoggedIn = false;
@@ -25,13 +26,13 @@ const App = () => {
     // <SafeAreaView style={styles.sectionContainer}>
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={isLoggedIn ? "HomeTabs" : "Start"}
+        initialRouteName={isLoggedIn ? "HomeTabs" : "Info"}
         screenOptions={{
           headerShown: false,
         }}
       >
         <Stack.Screen name="HomeTabs" component={HomeTabs} />
-
+        <Stack.Screen name="PetBreed" component={PetBreed} />
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Start" component={StartScreen} />
         <Stack.Screen name="Number" component={Number} />

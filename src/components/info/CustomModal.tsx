@@ -4,6 +4,8 @@ import { RH, RW } from "../../utils/helpers/responsive";
 import appStyles from "../../constants/styles";
 import Devider from "../shared/Devider";
 import Row from "../shared/Row";
+import { useDispatch } from "react-redux";
+import { setCharacter, setView } from "../../redux/slices/infoSlice";
 
 type Props = {
   modalVisible: boolean;
@@ -16,7 +18,16 @@ const dataСharacter = ["Calm", "Neutral", "Aggressive"];
 
 const CustomModal = ({ modalVisible, closeModal, isView }: Props) => {
   const [selected, setSelected] = React.useState<string>("");
+  const dispatch = useDispatch();
   const data = isView ? dataView : dataСharacter;
+  const done = () => {
+    if (isView) {
+      dispatch(setView(selected));
+    } else {
+      dispatch(setCharacter(selected));
+    }
+    closeModal();
+  };
   return (
     <Modal
       animationType="slide"
@@ -52,12 +63,15 @@ const CustomModal = ({ modalVisible, closeModal, isView }: Props) => {
             <TouchableOpacity onPress={closeModal}>
               <Text style={styles.closeButtonText}>Сancel</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              disabled={data.find((item) => item == selected) == undefined}
+              onPress={done}
+            >
               <Text
                 style={[
                   styles.doneButtonText,
                   {
-                    color: !!selected
+                    color: data.find((item) => item == selected)
                       ? "rgba(0, 220, 146, 1)"
                       : "rgba(189, 189, 189, 1)",
                   },

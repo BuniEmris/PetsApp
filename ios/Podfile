@@ -17,6 +17,8 @@ target 'PetApp' do
 
   pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
 
+  pod 'react-native-background-timer', :path => '../node_modules/react-native-background-timer'
+
   target 'PetAppTests' do
     inherit! :complete
     # Pods for testing

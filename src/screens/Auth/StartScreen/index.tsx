@@ -1,6 +1,7 @@
 import { View, Text, ImageBackground, Image } from "react-native";
 import React from "react";
 import { styles } from "./styles";
+import LoginButtons from "../../../components/login/LoginButtons";
 
 export default function StartScreen() {
   return (
@@ -11,6 +12,9 @@ export default function StartScreen() {
     >
       <View>
         <Text style={styles.text}>Petbook</Text>
+      </View>
+      <View>
+        <LoginButtons />
       </View>
     </ImageBackground>
   );
